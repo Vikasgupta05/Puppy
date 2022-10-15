@@ -7,8 +7,8 @@ import { Search } from "./component/search"
 import { Puppy } from './component/puppy'
 import { Navbar } from './component/navbar'
 
-function App() {
 
+function App() {
   return (
     <div className="App">
       <Navbar/>
@@ -17,7 +17,6 @@ function App() {
         <Route path="/search" element={<Search />}/>
         <Route path="/puppy" element={<Puppy/>}/>
       </Routes>
-     
     </div>
   )
 }
