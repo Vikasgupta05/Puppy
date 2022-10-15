@@ -6,21 +6,15 @@ export const Search = () => {
     const [search , setSearch] = useState()
     const [image , setImage] = useState()
 
-
-    
-    console.log(image)
-
     useEffect(() => {
         getdata()
     },[search])
 
     const getdata = () => {
         axios.get(`https://dog.ceo/api/breed/${search}/images`).then(function(res){
-            console.log( "reA" , res.data.message)
             setImage(res.data.message)
         })
     }
-
 
     return(
         <div>

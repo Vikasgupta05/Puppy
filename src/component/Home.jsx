@@ -22,9 +22,7 @@ export const Home = () => {
     }
 
 
-    const getname = (key) => {
-        console.log(key)
-    }
+  
     
     return(
             <div>
@@ -32,7 +30,7 @@ export const Home = () => {
                     Object.keys(data)?.map((key, index) => {
                         return(
                             <div key={index}>
-                                <h2><Link to={`/puppy`}> {key} </Link> </h2>
+                                <h2><Link to={`/puppy/${key}`} state={{name:key}}> {key} </Link> </h2>
                             </div>
                         )
                     })
